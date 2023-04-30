@@ -2,13 +2,13 @@ export class Planta {
   id: number;
   nombre_comun: string;
   nombre_cientifico: string;
-  tipo: Date;
+  tipo: string;
   altura_maxima: number;
   clima: string;
   sustrato_siembra: string;
 
   public constructor(id: number, nombre_comun: string,
-  nombre_cientifico: string,   tipo: Date,   altura_maxima: number,
+  nombre_cientifico: string,   tipo: string,   altura_maxima: number,
   clima: string,  sustrato_siembra: string){
     this.id=id;
     this.nombre_comun=nombre_comun;
@@ -23,7 +23,7 @@ export class Planta {
   export class PlantaDetail extends Planta {
 
     public constructor(id: number, nombre_comun: string,
-      nombre_cientifico: string,   tipo: Date,   altura_maxima: number,
+      nombre_cientifico: string,   tipo: string,   altura_maxima: number,
       clima: string,  sustrato_siembra: string) {
       super(id, nombre_comun, nombre_cientifico, tipo, altura_maxima, clima,sustrato_siembra );
 

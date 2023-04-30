@@ -10,14 +10,27 @@ import { PlantaService } from '../planta.service';
 export class PlantaListComponent implements OnInit {
 
   plantas: Planta[] = [];
+  totalPlantasInterior: {[type: string]: number} = {};
+  total: {[type: string]: number} = {};
 
   constructor(private plantaService: PlantaService) { }
 
   getPlantas(): void {
     this.plantaService.getPlantas().subscribe((plantas) => {
       this.plantas= plantas;
+      this.totalPlantasInterior = this.getTotalPlantasInterior();
     });
   }
+
+  getTotalPlantasInterior(): {[type: string]: number} {
+    const total: {[type: string]: number} = {};
+    this.plantas.forEach((plantas) => {
+      const tipo = plantas.tipo;
+      total[tipo] = (total[tipo] || 0) + 1;
+    });
+    return total;
+  }
+
   ngOnInit() {
     this.getPlantas();
   }
