@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { PlantaComponent } from './planta.component';
+import { PlantaListComponent } from './planta-list/planta-list.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,RouterModule,
   ],
-  declarations: [PlantaComponent]
+  declarations: [PlantaListComponent],
+  exports: [
+    PlantaListComponent
+  ]
 })
 export class PlantaModule { }

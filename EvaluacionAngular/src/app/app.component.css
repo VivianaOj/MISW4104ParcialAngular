@@ -1,0 +1,47 @@
+main {
+  flex: 1;
+}
+
+.navbar {
+  --bs-navbar-color: black;
+  --bs-navbar-active-color: black;
+  --bs-navbar-hover-color: #ccc;
+  --bs-navbar-brand-color: black;
+  --bs-navbar-brand-hover-color: #ccc;
+  --bs-navbar-brand-padding-y: 0;
+  --bs-navbar-padding-y: 0;
+  font-weight: 900;
+}
+
+.navbar-nav {
+  --bs-nav-link-padding-y: 1rem;
+}
+
+.navbar-nav .nav-link.active {
+  background-color: #813157;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar .navbar-nav .nav-item:not(:last-child) .nav-link {
+    border-right: 1px solid #fff;
+  }
+}
+
+footer {
+  color: black;
+  width: 100%;
+  font-weight: 900;
+}
+.container-fluid{
+  width: 90%;
+  border-bottom: 1px solid gray;
+}
+.bodyGeneral{
+  width: 90%;
+}
+
+.info{
+  text-align: center;
+  color: black;
+}
